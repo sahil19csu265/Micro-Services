@@ -1,0 +1,12 @@
+.hand{
+    cursor: pointer;
+}
+.size{
+    width: 60px;
+    height: 60px;
+}
+#colorcircle{
+    background-color: aqua;
+    height: 50px;
+    width: 50px;
+}
