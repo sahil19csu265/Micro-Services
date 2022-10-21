@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans 
+
+	xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	
+    <!-- Define your beans here i.e. Objects of the classes to be formed -->
+    
+    
+ 	
+    <bean id = "baseballCoach"
+    	  class = "DependencyInjection_CI.baseball">
+    		<constructor-arg ref="fortune"/> 
+    	  <constructor-arg name="name" value="sahil_BB"/>
+    	  <constructor-arg name="e_mail" value="sahil@BB"/>
+    	  <constructor-arg name="team_name" value="INDIA"/>
+   	</bean>
+   	
+   	<bean id = "footballCoach"
+   		  class = "DependencyInjection_CI.football">
+   		  <constructor-arg ref="fortune"/>
+   		  <constructor-arg name="name" value="sahil"/>
+    	  <constructor-arg name="e_mail" value="sahil@IFF"/>
+    	  <constructor-arg name="team_name" value="INDIA"/>	  
+   	</bean>
+   	
+   	<bean id="fortune"
+ 		 class="DependencyInjection_CI.Fortune">	
+ 	</bean>
+   			
+   	
+   
+    <!-- define the dependency -->
+   
+   	
+   
+</beans>

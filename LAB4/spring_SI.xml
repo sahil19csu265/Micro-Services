@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+
+	xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	
+    <!-- Define your beans here i.e. Objects of the classes to be formed -->
+    <bean id="baseballCoach"
+    	  class="DependencyInjection_SI.baseball">
+    	  <property name="ifortune" ref="fortune"/>	
+    	  <property name="name" value="sahil"/>
+    	  <property name="e_mail" value="sahil@BB"/>
+    	  <property name="team_name" value="INDIA"/> 
+    	  <property name="add" ref="Address"/>	 
+    </bean>
+    
+    <bean id="footballCoach"
+    	  class="DependencyInjection_SI.football">
+    	  <property name="ifortune" ref="fortune"/>	
+    	  <property name="name" value="sahil"/>
+    	  <property name="e_mail" value="Sahil@IFF"/>
+    	  <property name="team_name" value="INDIA"/> 
+    	  <property name="add" ref="Address"/>	 
+    </bean>
+    
+    <bean id="Address"
+    	  class="DependencyInjection_SI.address">
+    	  <property name="city" value="Gurugram"/>
+    	  <property name="state" value="Haryana"/>
+    </bean>
+    
+    <bean id="fortune"
+    	  class="DependencyInjection_SI.Fortune">
+    </bean>
+    
+ </beans>
